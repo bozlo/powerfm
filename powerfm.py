@@ -18,9 +18,9 @@ sys.setdefaultencoding('utf8')
 
 # constant
 vod_id = ''
-startPage = 1								# 1 means the latest page
+startPage = 1					# 1 means the latest page
 
-DL_ALL = ' '					 	# download All
+DL_ALL = ' '				 	# download All
 DL_YEAR = '365'					# almost a year
 DL_MONTH = '31'					# a month 
 DL_CUSTOM = '10'
@@ -73,7 +73,7 @@ for content in selected_sections:
 	try:
 		r = requests.get(listUrl, params=params, headers=headers);
 
-	  # If the response was successful, no Exception will be raised
+		# If the response was successful, no Exception will be raised
 		r.raise_for_status()
 	except HTTPError as http_err:
 		print('[list] HTTP error occurred: %s' % http_err)
